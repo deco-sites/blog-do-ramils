@@ -1,21 +1,19 @@
-import { ImageWidget } from "apps/admin/widgets.ts";
-
 import Image from "apps/website/components/Image.tsx";
 
+import { ImageWidget } from "apps/admin/widgets.ts";
+
 export interface Props {
-  bannerImage: {
-    image: ImageWidget;
-    altText?: string;
-  };
+  image: ImageWidget;
+  altText?: string;
 }
 
-export default function Banner({ bannerImage }: Props) {
+export default function Banner({ image, altText }: Props) {
   return (
     <div>
       <Image
         className="w-[100%] h-[100%] rounded object-top object-cover block"
-        alt={bannerImage.altText ? bannerImage.altText : ""}
-        src={bannerImage.image}
+        alt={altText ? altText : ""}
+        src={image}
         loading="eager"
         width={960}
         height={480}
