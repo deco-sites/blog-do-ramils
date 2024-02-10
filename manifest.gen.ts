@@ -4,10 +4,14 @@
 
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Article/Article.tsx";
-import * as $$$$$$2 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$3 from "./sections/Gallery.tsx";
-import * as $$$$$$4 from "./sections/Header/Header.tsx";
-import * as $$$$$$5 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$2 from "./sections/Article/Banner.tsx";
+import * as $$$$$$3 from "./sections/Article/ReleaseInfo.tsx";
+import * as $$$$$$4 from "./sections/Article/SubTitle.tsx";
+import * as $$$$$$5 from "./sections/Article/TitlePost.tsx";
+import * as $$$$$$6 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$7 from "./sections/Gallery.tsx";
+import * as $$$$$$8 from "./sections/Header/Header.tsx";
+import * as $$$$$$9 from "./sections/Theme/Theme.tsx";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 
@@ -15,10 +19,14 @@ const manifest = {
   "sections": {
     "deco-sites/blog-do-ramils/sections/Animation/Animation.tsx": $$$$$$0,
     "deco-sites/blog-do-ramils/sections/Article/Article.tsx": $$$$$$1,
-    "deco-sites/blog-do-ramils/sections/Footer/Footer.tsx": $$$$$$2,
-    "deco-sites/blog-do-ramils/sections/Gallery.tsx": $$$$$$3,
-    "deco-sites/blog-do-ramils/sections/Header/Header.tsx": $$$$$$4,
-    "deco-sites/blog-do-ramils/sections/Theme/Theme.tsx": $$$$$$5,
+    "deco-sites/blog-do-ramils/sections/Article/Banner.tsx": $$$$$$2,
+    "deco-sites/blog-do-ramils/sections/Article/ReleaseInfo.tsx": $$$$$$3,
+    "deco-sites/blog-do-ramils/sections/Article/SubTitle.tsx": $$$$$$4,
+    "deco-sites/blog-do-ramils/sections/Article/TitlePost.tsx": $$$$$$5,
+    "deco-sites/blog-do-ramils/sections/Footer/Footer.tsx": $$$$$$6,
+    "deco-sites/blog-do-ramils/sections/Gallery.tsx": $$$$$$7,
+    "deco-sites/blog-do-ramils/sections/Header/Header.tsx": $$$$$$8,
+    "deco-sites/blog-do-ramils/sections/Theme/Theme.tsx": $$$$$$9,
   },
   "apps": {
     "deco-sites/blog-do-ramils/apps/decohub.ts": $$$$$$$$$$$0,

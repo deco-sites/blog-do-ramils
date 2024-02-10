@@ -14,7 +14,10 @@ export default function Header({ image }: Props) {
   return (
     <header className={`border-b-2 border-[#F9F9F9]`}>
       <div className={"mainContainerHome py-4"}>
-        <a href="/" title={image.title ? image.title : "Ir para Página Inicial"}>
+        <a
+          href="/"
+          title={image.title ? image.title : "Ir para Página Inicial"}
+        >
           <Image
             className={"homeIcon"}
             alt={image.alt}
