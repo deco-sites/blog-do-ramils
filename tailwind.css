@@ -39,6 +39,18 @@
     @apply border-l border-transparent duration-200 whitespace-pre-line text-center;
     @apply flex flex-col items-center justify-start gap-8 py-10 px-8 lg:px-12;
   }
+
+  .homeIcon:hover svg path{
+    @apply stroke-[#64DEE5]
+  }
+
+  .mainContainer {
+    @apply w-[85vw] mx-auto max-w-[700px];
+  }
+  
+  .mainContainerHome {
+    @apply w-[85vw] mx-auto max-w-[1600px];
+  }
 }
 
 .group:disabled .group-disabled\:animate-progress {
