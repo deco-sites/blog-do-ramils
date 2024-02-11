@@ -11,13 +11,6 @@ export interface Props {
   blogPost: BlogPost | null;
 }
 
-/*
-    <Banner {...banner} />
-    <Title {...title} />
-    <SubTitle {...subtitle} />
-    <ReleaseInfo {...releaseInfo} />
-*/
-
 export default function Post({ blogPost }: Props) {
   if (!blogPost) {
     return (
@@ -30,7 +23,21 @@ export default function Post({ blogPost }: Props) {
   return (
     <div className="bg-[#fff] defaultHeight">
       <div className="mainContainer pt-[50px]">
-        <p>{blogPost.titleH1}</p>
+        <Banner
+          image={blogPost.banner.image}
+          altText={blogPost.banner.altText}
+        />
+        <Title titleH1={blogPost.titleH1} />
+        <SubTitle subTitleH2={blogPost.subTitle} />
+        <ReleaseInfo
+          releaseDate={blogPost.releaseInfo.releaseDate}
+          author={blogPost.releaseInfo.author}
+        />
+
+        <article
+          className={`contentPost mb-[100px]`}
+          dangerouslySetInnerHTML={{ __html: blogPost.content }}
+        />
       </div>
     </div>
   );
