@@ -9,7 +9,7 @@ const Loader = ({ blogPosts }: BlogPosts): BlogPost | null => {
     return index == blogPosts.length - 1;
   });
 
-  return mainPost[0];
+  return mainPost[0] || null;
 };
 
 export default Loader;
