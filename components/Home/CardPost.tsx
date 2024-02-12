@@ -13,12 +13,8 @@ export default function CardPost({ blogPost, isLastPost }: Props) {
   }
 
   return (
-    <a href={`/post/${blogPost.slug}`}>
-      <div
-        className={`${
-          isLastPost ? "mb-0" : "mb-20"
-        } sm:w-[45%] lg:w-[33%] blur-sm`}
-      >
+    <a href={`/post/${blogPost.slug}`} className={`${isLastPost ? "mb-0" : "mb-20" } sm:w-[45%] lg:w-[33%] blur-sm block pointer-events-none`}>
+      <div>
         <Image
           src={blogPost.banner.image}
           alt={blogPost.banner.altText}
@@ -27,7 +23,6 @@ export default function CardPost({ blogPost, isLastPost }: Props) {
           sizes="100vw"
           style={{ width: "100%", height: "auto" }}
         />
-
         <h3 className="font-medium text-xl mt-4 mainContainer hover:text-[#64DEE5] xl:text-2xl lg:mt-7 sm:w-[100%]">
           {blogPost.titleH1}
         </h3>
