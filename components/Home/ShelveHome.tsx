@@ -14,14 +14,14 @@ function verifyIndexMainPost(
   let mainPostIndex = 0;
 
   blogPosts.forEach((post: BlogPost, index: number) => {
-    if(post.slug == mainPost.slug) { mainPostIndex = index };
+    if (post.slug == mainPost.slug) mainPostIndex = index;
   });
 
   return mainPostIndex;
 }
 
 export default function ShelveHome({ blogPosts, mainPost }: BlogPosts) {
-  const blogPostsWithoutMainPost:BlogPost[] = [];
+  const blogPostsWithoutMainPost: BlogPost[] = [];
   let mainPostIndex = 0;
 
   if (mainPost) {
@@ -45,7 +45,9 @@ export default function ShelveHome({ blogPosts, mainPost }: BlogPosts) {
 
       <div className="sm:flex sm:w-[85vw] sm:mx-[auto] items-start justify-start gap-10 relative mh-[100px]">
         {newOrder.map((eachPost, index) => {
-          return <CardPost isLastPost={index == totalPosts} blogPost={eachPost} />
+          return (
+            <CardPost isLastPost={index == totalPosts} blogPost={eachPost} />
+          );
         })}
         <div
           className={`border-2 rounded-sm border-[#000] text-[#000] absolute top-1 -rotate-12 bg-[#fff] left-[0px] md:left-[-5px] px-3 font-semibold text-[14px]`}
