@@ -4,11 +4,38 @@ import type { BlogPost } from "$store/loaders/BlogPostData.ts";
 
 export interface BlogPosts {
   blogPosts: BlogPost[];
+  mainPost: BlogPost | null;
 }
 
-export default function ShelveHome({ blogPosts }: BlogPosts) {
-  const totalPosts = blogPosts.length;
-  const newOrder = blogPosts.reverse();
+function verifyIndexMainPost(
+  blogPosts: BlogPost[],
+  mainPost: BlogPost,
+): number {
+  let mainPostIndex = 0;
+
+  blogPosts.forEach((post: BlogPost, index: number) => {
+    if(post.slug == mainPost.slug) { mainPostIndex = index };
+  });
+
+  return mainPostIndex;
+}
+
+export default function ShelveHome({ blogPosts, mainPost }: BlogPosts) {
+  const blogPostsWithoutMainPost:BlogPost[] = [];
+  let mainPostIndex = 0;
+
+  if (mainPost) {
+    mainPostIndex = verifyIndexMainPost(blogPosts, mainPost);
+  }
+
+  blogPosts.forEach((post, index) => {
+    if (index != mainPostIndex) {
+      blogPostsWithoutMainPost.push(post);
+    }
+  });
+
+  const totalPosts = blogPostsWithoutMainPost.length;
+  const newOrder = blogPostsWithoutMainPost.reverse();
 
   return (
     <div className="border-t-2 border-[#000] py-12 text-[#464646]">
@@ -18,9 +45,7 @@ export default function ShelveHome({ blogPosts }: BlogPosts) {
 
       <div className="sm:flex sm:w-[85vw] sm:mx-[auto] items-start justify-start gap-10 relative mh-[100px]">
         {newOrder.map((eachPost, index) => {
-          return index != 0
-            ? <CardPost isLastPost={index == totalPosts} blogPost={eachPost} />
-            : "";
+          return <CardPost isLastPost={index == totalPosts} blogPost={eachPost} />
         })}
         <div
           className={`border-2 rounded-sm border-[#000] text-[#000] absolute top-1 -rotate-12 bg-[#fff] left-[0px] md:left-[-5px] px-3 font-semibold text-[14px]`}

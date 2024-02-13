@@ -13,7 +13,12 @@ export default function CardPost({ blogPost, isLastPost }: Props) {
   }
 
   return (
-    <a href={`/post/${blogPost.slug}`} className={`${isLastPost ? "mb-0" : "mb-20" } sm:w-[45%] lg:w-[33%] blur-sm block pointer-events-none`}>
+    <a
+      href={`/post/${blogPost.slug}`}
+      className={`${
+        isLastPost ? "mb-0" : "mb-20"
+      } sm:w-[45%] lg:w-[33%] blur-sm block pointer-events-none`}
+    >
       <div>
         <Image
           src={blogPost.banner.image}

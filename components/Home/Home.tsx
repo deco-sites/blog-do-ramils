@@ -14,7 +14,7 @@ export default function Home(
   return (
     <div className="lg:mainContainerHome defaultHeight">
       <MainPost mainPost={mainPost} />
-      <ShelveHome blogPosts={mostRecentlyPosts} />
+      <ShelveHome blogPosts={mostRecentlyPosts} mainPost={mainPost} />
     </div>
   );
 }
