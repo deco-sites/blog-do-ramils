@@ -26,6 +26,22 @@
     overflow: hidden;
     height: 100vh;
   }
+
+  .LinkedIn:hover {
+    filter: invert(29%) sepia(81%) saturate(5137%) hue-rotate(183deg) brightness(92%) contrast(89%);
+  }
+
+  .GitHub:hover {
+    filter: invert(11%) sepia(8%) saturate(1132%) hue-rotate(169deg) brightness(99%) contrast(88%);
+  }
+
+  .Portfolio:hover {
+    filter: invert(15%) sepia(93%) saturate(3609%) hue-rotate(288deg) brightness(88%) contrast(106%);
+  }
+
+  .IconHouse:hover {
+    filter: invert(98%) sepia(92%) saturate(4395%) hue-rotate(152deg) brightness(91%) contrast(97%);;
+  }
 }
 
 @layer components {
@@ -38,10 +54,6 @@
     @apply w-[380px] max-w-[380px] lg:h-[380px] bg-[#F4F4F4] rounded-3xl;
     @apply border-l border-transparent duration-200 whitespace-pre-line text-center;
     @apply flex flex-col items-center justify-start gap-8 py-10 px-8 lg:px-12;
-  }
-
-  .homeIcon:hover svg path{
-    @apply stroke-[#64DEE5]
   }
 
   .mainContainer {

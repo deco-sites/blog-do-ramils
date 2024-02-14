@@ -19,7 +19,7 @@ export default function Header({ image }: Props) {
           title={image.title ? image.title : "Ir para Página Inicial"}
         >
           <Image
-            className={"homeIcon"}
+            className={"IconHouse"}
             alt={image.alt}
             src={image.url}
             loading="eager"
