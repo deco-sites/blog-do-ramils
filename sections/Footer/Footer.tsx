@@ -48,7 +48,13 @@ export default function Footer({ socialMedias, myPhoto }: Props) {
                   height={25}
                   width={25}
                   alt={socialMedia.altText}
-                  className={ socialMedia.altText == 'LinkedIn' ? 'LinkedIn' : socialMedia.altText == 'GitHub' ? 'GitHub' : socialMedia.altText == 'Portfolio' ? 'Portfolio' : ''}
+                  className={socialMedia.altText == "LinkedIn"
+                    ? "LinkedIn"
+                    : socialMedia.altText == "GitHub"
+                    ? "GitHub"
+                    : socialMedia.altText == "Portfolio"
+                    ? "Portfolio"
+                    : ""}
                 />
               </a>
             );
