@@ -35,7 +35,7 @@ export default function Post({ blogPost }: Props) {
         />
 
         <article
-          className={`contentPost mb-[100px]`}
+          className={`contentPost`}
           dangerouslySetInnerHTML={{ __html: blogPost.content }}
         />
       </div>

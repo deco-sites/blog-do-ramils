@@ -63,6 +63,18 @@
   .mainContainerHome {
     @apply w-[85vw] mx-auto max-w-[1600px];
   }
+
+  .contentPost {
+    @apply my-10 text-[#4e4e4e];
+  }
+
+  .contentPost h3 {
+    @apply font-semibold text-xl mb-4 mt-14;
+  }
+
+  .contentPost p span {
+    @apply mb-5 text-base leading-7 sm:leading-8 block;
+  }
 }
 
 .group:disabled .group-disabled\:animate-progress {
