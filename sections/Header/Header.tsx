@@ -8,11 +8,12 @@ export interface Props {
     alt: string;
     title?: string;
   };
+  isHomeHeader?: boolean;
 }
 
-export default function Header({ image }: Props) {
+export default function Header({ image, isHomeHeader }: Props) {
   return (
-    <header className={`border-b-2 border-[#F9F9F9]`}>
+    <header className={`border-b-2 ${isHomeHeader ? 'border-[#000]' : 'border-[#F9F9F9]'}`}>
       <div className={"mainContainerHome py-4"}>
         <a
           href="/"

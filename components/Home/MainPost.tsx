@@ -18,7 +18,7 @@ export default function MainPost({ mainPost }: Props) {
   return (
     <a
       href={`/post/${mainPost.slug}`}
-      className={"w-[100vw] h-[50vw] lg:flex lg:w-[100%] lg:h-[auto] flex-row-reverse py-10 gap-8"}
+      className={"w-[100vw] h-[50vw] lg:flex lg:w-[100%] lg:h-[auto] flex-row-reverse py-10 gap-8 lg:items-center"}
       title={`Ir para o artigo ${mainPost.titleH1}`}
     >
       <div className="lg:w-[50%] lg:h-[auto]">
