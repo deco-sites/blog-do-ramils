@@ -20,15 +20,19 @@ export default function Post({ blogPost }: Props) {
     );
   }
 
-  const articleStructuredData = `{"@context":"https://schema.org","@type":"Article","name":"${blogPost.titleH1}","author":{"@type":"Person","name":"${blogPost.releaseInfo.author}","url":"https://deco-sites-blog-do-ramils.deno.dev/post/${blogPost.slug}"},"datePublished":"${blogPost.releaseInfo.releaseDate}","image":"${blogPost.banner.image}","headline":"${blogPost.titleH1}","articleBody":"${blogPost.subTitle}"}` 
-  const title = blogPost.titleH1 + ` | Blog do Ramils`
+  const articleStructuredData =
+    `{"@context":"https://schema.org","@type":"Article","name":"${blogPost.titleH1}","author":{"@type":"Person","name":"${blogPost.releaseInfo.author}","url":"https://deco-sites-blog-do-ramils.deno.dev/post/${blogPost.slug}"},"datePublished":"${blogPost.releaseInfo.releaseDate}","image":"${blogPost.banner.image}","headline":"${blogPost.titleH1}","articleBody":"${blogPost.subTitle}"}`;
+  const title = blogPost.titleH1 + ` | Blog do Ramils`;
 
   return (
     <>
       <head>
         <title>{title}</title>
         <meta name="description" content={blogPost.subTitle} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: articleStructuredData}} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: articleStructuredData }}
+        />
       </head>
       <div className="bg-[#fff] defaultHeight">
         <div className="mainContainer pt-[50px]">
