@@ -16,6 +16,9 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+      fontFamily: {
+        "serifRoboto": ['"Roboto Serif"', "serif"],
+      },
     },
   },
 };

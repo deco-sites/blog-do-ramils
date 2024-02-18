@@ -65,7 +65,7 @@
   }
 
   .contentPost {
-    @apply my-10 text-[#4e4e4e];
+    @apply my-10 !text-[#4e4e4e];
   }
 
   .contentPost h3 {
@@ -73,7 +73,7 @@
   }
 
   .contentPost p span {
-    @apply mb-5 text-base leading-7 sm:leading-8 block;
+    @apply mb-5 !text-base !leading-7 sm:!leading-8 block font-serifRoboto;
   }
 }
 
