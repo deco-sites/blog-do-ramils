@@ -5,13 +5,13 @@ interface Props {
 }
 
 export default function Seo({ blogPost }: Props) {
-    if (!blogPost) {
-        return (
-            <div>
-                <p>Not Found</p>
-            </div>
-        );
-    }
+  if (!blogPost) {
+    return (
+      <div>
+        <p>Not Found</p>
+      </div>
+    );
+  }
 
   const url =
     `https://deco-sites-blog-do-ramils.deno.dev/post/${blogPost.slug}`;
