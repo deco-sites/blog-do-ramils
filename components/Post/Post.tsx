@@ -2,6 +2,7 @@ import Banner from "./Banner.tsx";
 import Title from "./Title.tsx";
 import SubTitle from "./SubTitle.tsx";
 import ReleaseInfo from "./ReleaseInfo.tsx";
+import Seo from "./Seo.tsx";
 
 import { ImageWidget } from "apps/admin/widgets.ts";
 
@@ -20,26 +21,10 @@ export default function Post({ blogPost }: Props) {
     );
   }
 
-  const articleStructuredData =
-    `{"@context":"https://schema.org","@type":"Article","name":"${blogPost.titleH1}","author":{"@type":"Person","name":"${blogPost.releaseInfo.author}","url":"https://deco-sites-blog-do-ramils.deno.dev/post/${blogPost.slug}"},"datePublished":"${blogPost.releaseInfo.releaseDate}","image":"${blogPost.banner.image}","headline":"${blogPost.titleH1}","articleBody":"${blogPost.subTitle}"}`;
-  const title = blogPost.titleH1 + ` | Blog do Ramils`;
-
   return (
     <>
       <head>
-        <title>{title}</title>
-        <meta name="description" content={blogPost.subTitle} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: articleStructuredData }}
-        />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
-          rel="stylesheet"
-        />
+        <Seo blogPost={blogPost} />
       </head>
       <div className="bg-[#fff] defaultHeight">
         <div className="mainContainer pt-[50px]">
