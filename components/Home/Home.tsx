@@ -11,10 +11,27 @@ export interface MostRecentlyPosts {
 export default function Home(
   { mainPost, mostRecentlyPosts }: MostRecentlyPosts,
 ) {
+  if (!mainPost) {
+    return (
+      <div>
+        Not Found
+      </div>
+    );
+  }
+
   return (
-    <div className="lg:mainContainerHome defaultHeight">
-      <MainPost mainPost={mainPost} />
-      <ShelveHome blogPosts={mostRecentlyPosts} mainPost={mainPost} />
-    </div>
+    <>
+      <head>
+        <link
+          rel="preload"
+          href={mainPost.banner.image}
+          as="image"
+        />
+      </head>
+      <div className="lg:mainContainerHome defaultHeight">
+        <MainPost mainPost={mainPost} />
+        <ShelveHome blogPosts={mostRecentlyPosts} mainPost={mainPost} />
+      </div>
+    </>
   );
 }

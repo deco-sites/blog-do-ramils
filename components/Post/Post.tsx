@@ -24,6 +24,7 @@ export default function Post({ blogPost }: Props) {
   return (
     <>
       <head>
+        <link rel="preload" href={blogPost.banner.image} as="image" />
         <Seo blogPost={blogPost} />
       </head>
       <div className="bg-[#fff] defaultHeight">

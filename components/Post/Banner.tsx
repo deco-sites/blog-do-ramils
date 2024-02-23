@@ -17,6 +17,7 @@ export default function Banner({ image, altText }: Props) {
         loading="eager"
         width={960}
         height={480}
+        fetchPriority="high"
       />
     </div>
   );
