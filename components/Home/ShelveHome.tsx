@@ -46,7 +46,7 @@ export default function ShelveHome({ blogPosts, mainPost }: BlogPosts) {
       <div className="sm:flex sm:w-[85vw] sm:mx-[auto] items-start justify-start gap-10 relative mh-[100px]">
         {newOrder.map((eachPost, index) => {
           return (
-            <CardPost isLastPost={index == totalPosts} blogPost={eachPost} />
+            <CardPost isLastPost={index == totalPosts} blogPost={eachPost} position={index} />
           );
         })}
         <div
