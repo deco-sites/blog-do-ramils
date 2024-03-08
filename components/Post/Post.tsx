@@ -1,4 +1,5 @@
 import Banner from "./Banner.tsx";
+import TagList from "./TagList.tsx";
 import Title from "./Title.tsx";
 import SubTitle from "./SubTitle.tsx";
 import ReleaseInfo from "./ReleaseInfo.tsx";
@@ -33,6 +34,7 @@ export default function Post({ blogPost }: Props) {
             image={blogPost.banner.image}
             altText={blogPost.banner.altText}
           />
+          <TagList tags={blogPost.tag} />
           <Title titleH1={blogPost.titleH1} />
           <SubTitle subTitleH2={blogPost.subTitle} />
           <ReleaseInfo

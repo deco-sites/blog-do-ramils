@@ -5,6 +5,7 @@ export interface BlogPost {
   slug: string;
   titleH1: string;
   subTitle: string;
+  tag?: string[];
   banner: {
     image: ImageWidget;
     altText: string;
