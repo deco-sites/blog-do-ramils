@@ -5,6 +5,7 @@
 import * as $$$0 from "./loaders/BlogPostData.ts";
 import * as $$$1 from "./loaders/BlogPostPage.ts";
 import * as $$$2 from "./loaders/MainPostHome.ts";
+import * as $$$3 from "./loaders/Tags.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$2 from "./sections/Gallery.tsx";
@@ -21,6 +22,7 @@ const manifest = {
     "deco-sites/blog-do-ramils/loaders/BlogPostData.ts": $$$0,
     "deco-sites/blog-do-ramils/loaders/BlogPostPage.ts": $$$1,
     "deco-sites/blog-do-ramils/loaders/MainPostHome.ts": $$$2,
+    "deco-sites/blog-do-ramils/loaders/Tags.ts": $$$3,
   },
   "sections": {
     "deco-sites/blog-do-ramils/sections/Animation/Animation.tsx": $$$$$$0,

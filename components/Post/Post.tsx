@@ -8,12 +8,14 @@ import Seo from "./Seo.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 
 import type { BlogPost } from "$store/loaders/BlogPostData.ts";
+import type { Tag } from "$store/loaders/Tags.ts";
 
 export interface Props {
   blogPost: BlogPost | null;
+  tags: Tag[];
 }
 
-export default function Post({ blogPost }: Props) {
+export default function Post({ blogPost, tags }: Props) {
   if (!blogPost) {
     return (
       <div>
@@ -34,7 +36,7 @@ export default function Post({ blogPost }: Props) {
             image={blogPost.banner.image}
             altText={blogPost.banner.altText}
           />
-          <TagList tags={blogPost.tag} />
+          <TagList tags={blogPost.tag} allTags={tags} />
           <Title titleH1={blogPost.titleH1} />
           <SubTitle subTitleH2={blogPost.subTitle} />
           <ReleaseInfo
