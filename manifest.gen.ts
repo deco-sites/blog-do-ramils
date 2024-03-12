@@ -6,14 +6,15 @@ import * as $$$0 from "./loaders/BlogPostData.ts";
 import * as $$$1 from "./loaders/BlogPostPage.ts";
 import * as $$$2 from "./loaders/MainPostHome.ts";
 import * as $$$3 from "./loaders/Tags.ts";
-import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
-import * as $$$$$$1 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$2 from "./sections/Gallery.tsx";
-import * as $$$$$$3 from "./sections/Header/Header.tsx";
-import * as $$$$$$4 from "./sections/Home/Home.tsx";
-import * as $$$$$$5 from "./sections/MostRecentlyPosts/MostRecentlyPosts.tsx";
-import * as $$$$$$6 from "./sections/Post/Post.tsx";
-import * as $$$$$$7 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$0 from "./sections/404/PageNotFound.tsx";
+import * as $$$$$$1 from "./sections/Animation/Animation.tsx";
+import * as $$$$$$2 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$3 from "./sections/Gallery.tsx";
+import * as $$$$$$4 from "./sections/Header/Header.tsx";
+import * as $$$$$$5 from "./sections/Home/Home.tsx";
+import * as $$$$$$6 from "./sections/MostRecentlyPosts/MostRecentlyPosts.tsx";
+import * as $$$$$$7 from "./sections/Post/Post.tsx";
+import * as $$$$$$8 from "./sections/Theme/Theme.tsx";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 
@@ -25,15 +26,16 @@ const manifest = {
     "deco-sites/blog-do-ramils/loaders/Tags.ts": $$$3,
   },
   "sections": {
-    "deco-sites/blog-do-ramils/sections/Animation/Animation.tsx": $$$$$$0,
-    "deco-sites/blog-do-ramils/sections/Footer/Footer.tsx": $$$$$$1,
-    "deco-sites/blog-do-ramils/sections/Gallery.tsx": $$$$$$2,
-    "deco-sites/blog-do-ramils/sections/Header/Header.tsx": $$$$$$3,
-    "deco-sites/blog-do-ramils/sections/Home/Home.tsx": $$$$$$4,
+    "deco-sites/blog-do-ramils/sections/404/PageNotFound.tsx": $$$$$$0,
+    "deco-sites/blog-do-ramils/sections/Animation/Animation.tsx": $$$$$$1,
+    "deco-sites/blog-do-ramils/sections/Footer/Footer.tsx": $$$$$$2,
+    "deco-sites/blog-do-ramils/sections/Gallery.tsx": $$$$$$3,
+    "deco-sites/blog-do-ramils/sections/Header/Header.tsx": $$$$$$4,
+    "deco-sites/blog-do-ramils/sections/Home/Home.tsx": $$$$$$5,
     "deco-sites/blog-do-ramils/sections/MostRecentlyPosts/MostRecentlyPosts.tsx":
-      $$$$$$5,
-    "deco-sites/blog-do-ramils/sections/Post/Post.tsx": $$$$$$6,
-    "deco-sites/blog-do-ramils/sections/Theme/Theme.tsx": $$$$$$7,
+      $$$$$$6,
+    "deco-sites/blog-do-ramils/sections/Post/Post.tsx": $$$$$$7,
+    "deco-sites/blog-do-ramils/sections/Theme/Theme.tsx": $$$$$$8,
   },
   "apps": {
     "deco-sites/blog-do-ramils/apps/decohub.ts": $$$$$$$$$$$0,
