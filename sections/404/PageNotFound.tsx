@@ -12,7 +12,7 @@ export interface Props {
   button?: {
     link: string;
     text: string;
-  }
+  };
 }
 
 export default function PageNotFound({ title, subTitle, button }: Props) {
@@ -37,7 +37,17 @@ export default function PageNotFound({ title, subTitle, button }: Props) {
           dangerouslySetInnerHTML={{ __html: subTitle }}
         />
 
-        { button ? <a href={button.link} title={button.text} class="bg-[#afe2ff] h-8 flex items-center justify-center text-white rounded-sm mx-auto max-w-[300px] font-semibold mb-12 md:mb-20 hover:bg-[#87c8ee]"><button>{button.text}</button></a> : '' }
+        {button
+          ? (
+            <a
+              href={button.link}
+              title={button.text}
+              class="bg-[#afe2ff] h-8 flex items-center justify-center text-white rounded-sm mx-auto max-w-[300px] font-semibold mb-12 md:mb-20 hover:bg-[#87c8ee]"
+            >
+              <button>{button.text}</button>
+            </a>
+          )
+          : ""}
       </div>
     </div>
   );
