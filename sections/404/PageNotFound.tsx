@@ -9,10 +9,13 @@ export interface Props {
    * @format html
    */
   subTitle: string;
-  link?: string;
+  button?: {
+    link: string;
+    text: string;
+  }
 }
 
-export default function PageNotFound({ title, subTitle, link }: Props) {
+export default function PageNotFound({ title, subTitle, button }: Props) {
   return (
     <div class="mainContainer flex flex-col-reverse py-20">
       <div>
@@ -33,6 +36,8 @@ export default function PageNotFound({ title, subTitle, link }: Props) {
           class="text-base block pt-3 py-6 font-light md:text-xl"
           dangerouslySetInnerHTML={{ __html: subTitle }}
         />
+
+        { button ? <a href={button.link} title={button.text} class="bg-[#afe2ff] h-8 flex items-center justify-center text-white rounded-sm mx-auto max-w-[300px] font-semibold mb-12 md:mb-20 hover:bg-[#87c8ee]"><button>{button.text}</button></a> : '' }
       </div>
     </div>
   );
