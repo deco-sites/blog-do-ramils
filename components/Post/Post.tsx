@@ -9,6 +9,7 @@ import { ImageWidget } from "apps/admin/widgets.ts";
 
 import type { BlogPost } from "$store/loaders/BlogPostData.ts";
 import type { Tag } from "$store/loaders/Tags.ts";
+import { redirect } from "deco/mod.ts";
 
 export interface Props {
   blogPost: BlogPost | null;
@@ -17,11 +18,9 @@ export interface Props {
 
 export default function Post({ blogPost, tags }: Props) {
   if (!blogPost) {
-    return (
-      <div>
-        <p>Not Found</p>
-      </div>
-    );
+    redirect("https://deco-sites-blog-do-ramils.deno.dev/404");
+
+    return <div>Not Found</div>;
   }
 
   return (
