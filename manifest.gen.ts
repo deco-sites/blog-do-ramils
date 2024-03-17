@@ -15,7 +15,8 @@ import * as $$$$$$4 from "./sections/Header/Header.tsx";
 import * as $$$$$$5 from "./sections/Home/Home.tsx";
 import * as $$$$$$6 from "./sections/MostRecentlyPosts/MostRecentlyPosts.tsx";
 import * as $$$$$$7 from "./sections/Post/Post.tsx";
-import * as $$$$$$8 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$8 from "./sections/PostByTag/PostByTag.tsx";
+import * as $$$$$$9 from "./sections/Theme/Theme.tsx";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 
@@ -37,7 +38,8 @@ const manifest = {
     "deco-sites/blog-do-ramils/sections/MostRecentlyPosts/MostRecentlyPosts.tsx":
       $$$$$$6,
     "deco-sites/blog-do-ramils/sections/Post/Post.tsx": $$$$$$7,
-    "deco-sites/blog-do-ramils/sections/Theme/Theme.tsx": $$$$$$8,
+    "deco-sites/blog-do-ramils/sections/PostByTag/PostByTag.tsx": $$$$$$8,
+    "deco-sites/blog-do-ramils/sections/Theme/Theme.tsx": $$$$$$9,
   },
   "apps": {
     "deco-sites/blog-do-ramils/apps/decohub.ts": $$$$$$$$$$$0,
