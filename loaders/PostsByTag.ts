@@ -9,8 +9,7 @@ export interface LoaderPostsByTag {
 const PostsByTag = ({ tag, posts }: LoaderPostsByTag): BlogPost[] | null => {
   if (tag) {
     const filtered = posts.filter((post) => {
-
-      if(post.tag) {
+      if (post.tag) {
         return post.tag?.indexOf(tag) != -1;
       }
     });
